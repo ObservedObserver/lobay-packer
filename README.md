@@ -1,7 +1,7 @@
 # lobay-packer
-![](https://img.shields.io/badge/language-javascript-red.svg)
 ![](https://img.shields.io/badge/license-MIT-000000.svg)
 ![](https://www.travis-ci.org/ObservedObserver/lobay-packer.svg?branch=master)
+
 lobay packer is a boring and light module bundler for using .lobay component file.
 
 ## `.lobay` component
