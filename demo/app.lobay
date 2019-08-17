@@ -2,9 +2,18 @@
   <div>
     <h1 class="test-header">hello</h1>
     <p>test</p>
+    <div>
+      <foo />
+      <bar></bar>
+    </div>
     <button onclick="test()"></button>
   </div>
 </template>
+
+<components>
+  foo
+  bar
+</components>
 
 <script>
   function test() {
