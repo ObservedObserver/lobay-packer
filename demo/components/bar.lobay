@@ -1,0 +1,23 @@
+<template>
+  <div>
+    <h2>hello bar</h2>
+    <p>bar components</p>
+    <foo />
+    <button onclick="bar()"></button>
+  </div>
+</template>
+
+<components>
+{
+  foo: './foo.lobay'
+}
+</components>
+
+<script>
+  function bar() {
+    console.log('click bar')
+  }
+</script>
+
+<style>
+</style>

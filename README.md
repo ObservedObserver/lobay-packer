@@ -15,7 +15,6 @@ lobay component is made of four parts, templates, components, script and style. 
 You can still use jquery within lobay components if you like.
 
 ```js
-// html template
 <template>
   <div>
     <h1 class="test-header">hello</h1>
@@ -28,10 +27,11 @@ You can still use jquery within lobay components if you like.
   </div>
 </template>
 
-// components used
 <components>
-  foo
-  bar
+{
+  foo: './components/foo.lobay',
+  bar: './components/bar.lobay'
+}
 </components>
 
 <script>

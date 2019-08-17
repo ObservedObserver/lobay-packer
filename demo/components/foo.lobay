@@ -1,0 +1,20 @@
+<template>
+  <div>
+    <h2>hello foo</h2>
+    <p>foo components</p>
+    <button onclick="foo()"></button>
+  </div>
+</template>
+
+<components>
+
+</components>
+
+<script>
+  function foo() {
+    console.log('click foo')
+  }
+</script>
+
+<style>
+</style>

@@ -14,8 +14,11 @@ describe('[lobay-loader]', function () {
   })
   it('components should has foo & bar', async function () {
     const { components } = await loader(testpath);
-    let comlist = ['foo', 'bar'];
-    assert.deepEqual(components, comlist);
+    let comdict = {
+      foo: './components/foo.lobay',
+      bar: './components/bar.lobay'
+    };
+    assert.deepEqual(components, comdict);
   })
   it('script should get content', async function () {
     const { script } = await loader(testpath);

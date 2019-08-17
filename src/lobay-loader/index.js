@@ -24,12 +24,17 @@ async function loadFile(filepath) {
     let template = '';
     let script = '';
     let style = '';
-    let components = [];
+    let components = {};
     if (content.match(TEMPLATE).length > 0) {
       template = content.match(TEMPLATE)[0].slice('<template>'.length, -'</template>'.length);
     }
     if (content.match(COMPONENTS).length > 0) {
-      components = content.match(COMPONENTS)[0].slice('<components>'.length, -'</components>'.length).split(/[\s]+/).filter(c => c !== '');
+      const value = content
+        .match(COMPONENTS)[0]
+        .slice('<components>'.length, -'</components>'.length)
+        .replace(/[\s]+/g, '');
+
+      eval('components=' + (value === '' ? '{}' : value));
     }
     if (content.match(SCRIPT).length > 0) {
       script = content.match(SCRIPT)[0].slice('<script>'.length, -'</script>'.length);
@@ -37,6 +42,7 @@ async function loadFile(filepath) {
     if (content.match(STYLE).length > 0) {
       style = content.match(STYLE)[0].slice('<style>'.length, -'</style>'.length);
     }
+    components = components || {};
     return { template, script, style, components };
   } catch (error) {
     return error;

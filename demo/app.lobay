@@ -11,8 +11,10 @@
 </template>
 
 <components>
-  foo
-  bar
+{
+  foo: './components/foo.lobay',
+  bar: './components/bar.lobay'
+}
 </components>
 
 <script>
