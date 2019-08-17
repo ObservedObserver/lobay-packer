@@ -14,6 +14,7 @@
   "dependencies": {},
   "devDependencies": {
     "emoji-regex": "^8.0.0",
-    "mocha": "^6.2.0"
+    "mocha": "^6.2.0",
+    "rollup": "^1.19.4"
   }
 }

@@ -1,6 +1,6 @@
 const assert = require('assert');
 
-const loader = require('../src/lobay-loader/index.js');
+const loader = require('../build/bundle.js').lobayLoader;
 
 const fs = require('fs');
 

@@ -1,4 +1,4 @@
-const fs = require('fs');
+import fs from 'fs';
 
 const TEMPLATE = /<template>[\s\S]*<\/template>/;
 const COMPONENTS = /<components>[\s\S]*<\/components>/;
@@ -43,4 +43,4 @@ async function loadFile(filepath) {
   }
 }
 
-module.exports = loadFile;
+export default loadFile;
