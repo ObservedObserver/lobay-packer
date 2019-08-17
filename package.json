@@ -1,0 +1,19 @@
+{
+  "name": "lobay-packer",
+  "version": "0.0.1",
+  "description": "pack web dev files",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "Observed Observer",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "emoji-regex": "^8.0.0",
+    "mocha": "^6.2.0"
+  }
+}
