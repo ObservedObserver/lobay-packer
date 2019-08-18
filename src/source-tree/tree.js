@@ -11,11 +11,14 @@ function hasType (filepath) {
 async function buildTree (entrance) {
   const dirpath =  entrance.split('/').slice(0, -1).join('/');
   const filename = entrance.split('/').slice(-1)[0];
+  const { template, script, style, components } = await loadFile(entrance);
   let node = {
     name: filename.replace(new RegExp(`.${FILE_TYPES.join('|')}`), ''),
-    children: []
+    children: [],
+    template,
+    script,
+    style
   };
-  const { components } = await loadFile(entrance);
   const comList = Object.values(components);
   for (let com of comList) {
     const compath = path.resolve(dirpath, com + (hasType(com) ? '' : '.lobay'));
